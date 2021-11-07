@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="d-flex justify-content-between float-right">
+      <div class="col d-flex ">
+        <div class="float-right">Mi banco - {{titulo}}</div>
+        
+      </div>
+      <div class="col ">
+        <button type="button" class="btn mr-3" (click)="nuevoDestinatario()">Nuevo Destinatario</button>
+        <button type="button" class="btn ml-5" (click)="transferenciaDestinatario()">Transferencia</button>
+        <button type="button" class="btn" (click)='movimientoTransferencia()'>Movimiento</button>
+      </div>
+    </div>
+    {{tituloAccion}}
+  </div>
