@@ -1,1 +1,47 @@
-<p>nuevo-destinatario works!</p>
+
+<div class="container-fluid">
+    <form [formGroup]="destinatario" class="form-horizontal row">
+        <div class="row">
+            <div class="col-6 mt-2">
+                <label for="rut">Rut: </label>
+                <input id="rut" class="form-control" type="text" formControlName="rut">
+            </div>
+            <div class="col-6 mt-2">
+                <label for="nombre">Nombre: </label>
+                <input id="nombre" class="form-control" type="text" formControlName="nombre">
+            </div>
+            <div class="col-6 mt-2">
+                <label for="correo">Correo: </label>
+                <input id="correo" class="form-control" type="text" formControlName="correo">
+            </div>
+
+            <div class="col-6 mt-2">
+                <label for="telefono">Teléfono: </label>
+                <input id="telefono" class="form-control" type="text" formControlName="telefono">
+            </div>
+            <div class="col-6 mt-2">
+                <label for="banco">Banco: </label>
+                <select class="form-select" aria-label="Default select example">
+                    <option value="">Seleccione un banco</option>
+                    <option *ngFor="let banco of Bancos" [ngValue]="banco.id">{{banco.name}}</option>  
+                </select>
+            </div>
+            <div class="col-6 mt-2">
+                <label for="tipocuenta">Tipo de cuenta: </label>
+                <select class="form-select" aria-label="Default select example">
+                    <option value="">Seleccione un tipo de cuenta</option>
+                    <option *ngFor="let tipocuenta of tipoCuentas" [ngValue]="tipocuenta">{{tipocuenta}}</option> 
+                </select>
+                
+            </div>
+            <div class="col-6 mt-2">
+                <label for="nrocuenta">Nro. Cuenta: </label>
+                <input id="nroCuenta" class="form-control" type="text" formControlName="numeroCuenta">  
+            </div>
+
+            <div class="col-12 text-center mt-5">
+                <button type="button" class="btn btn-success">Crear</button>  
+            </div>
+        </div>
+    </form>
+</div>

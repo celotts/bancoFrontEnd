@@ -5,10 +5,11 @@
         
       </div>
       <div class="col ">
-        <button type="button" class="btn mr-3" (click)="nuevoDestinatario()">Nuevo Destinatario</button>
+        <button type="button" class="btn mr-3" (click)="nuevoDestinatario()"> Nuevo Destinatario</button>
         <button type="button" class="btn ml-5" (click)="transferenciaDestinatario()">Transferencia</button>
-        <button type="button" class="btn" (click)='movimientoTransferencia()'>Movimiento</button>
+        <button type="button" class="btn"  (click)="movimientoTransferencia()">Movimiento</button>
       </div>
     </div>
-    {{tituloAccion}}
+    <h2>{{tituloAccion}}</h2>
+    <router-outlet></router-outlet>
   </div>

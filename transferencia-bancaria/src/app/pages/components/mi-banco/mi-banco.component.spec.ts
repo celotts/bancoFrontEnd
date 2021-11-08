@@ -27,6 +27,7 @@ describe('MiBancoComponent', () => {
   });
   it('should create function transferenciaDestinatario', () => {
     expect(component.transferenciaDestinatario).toBeTruthy();
+    expect(component.tituloAccion === '').toBeTrue();
   });
   it('should create function transferenciaDestinatario', () => {
     expect(component.movimientoTransferencia).toBeTruthy();

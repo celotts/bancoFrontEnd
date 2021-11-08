@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mi-banco',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class MiBancoComponent implements OnInit {
   titulo: string;
   tituloAccion: string;
-  constructor() {
+  constructor(private router: Router) {
     this.titulo = 'Nueva Transferencia';
     this.tituloAccion = '';
     this.nuevoDestinatario();
@@ -17,13 +18,16 @@ export class MiBancoComponent implements OnInit {
   ngOnInit(): void {}
   nuevoDestinatario() {
     this.tituloAccion = 'Nuevo Destinatario';
+    this.router.navigate(['/nuevoDestinatario']);
   }
 
   transferenciaDestinatario() {
     this.tituloAccion = 'Transferir';
+    this.router.navigate(['/transferir']);
   }
 
   movimientoTransferencia() {
     this.tituloAccion = 'Historial';
+    this.router.navigate(['/historial']);
   }
 }

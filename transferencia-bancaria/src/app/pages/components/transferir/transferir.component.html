@@ -1,1 +1,34 @@
-<p>transferir works!</p>
+<div class="container-fluid">
+<form [formGroup]="transferencia">
+    <div class="col-12 mt-2">
+        <label class="col-12 mt-2" for="first-name">Banco Destinatario: </label>
+        <input class="col-3" id="first-name" type="text" formControlName="banco">
+    </div>
+   
+    <div class="col-6 mt-2">
+        <h4>Detalle del destinatario</h4>
+    </div>
+
+    <div class="row">
+        <div class="col-12 mt-2">
+            <label for="last-name">Nombre: </label>
+        </div>
+        <div class="col-12 mt-2">
+        <label for="last-name">Correo: </label>
+        </div>
+        <div class="col-12 mt-2">
+            <label for="last-name">Banco: </label>
+        </div>
+        <div class="col-12 mt-2">
+            <label for="last-name">Tipo de cuenta: </label>
+        </div>
+    </div>
+    <div class="col-12 mt-2">
+        <label class="col-12 mt-2" for="last-name mt-2">Monto: </label>
+        <input class="col-3 mt-2" id="last-name" type="text" formControlName="monto">
+    </div>
+    <div class="col-12 text-center mt-5">
+        <button type="button" class="btn btn-success">Crear</button>  
+    </div>
+  </form>
+</div>
