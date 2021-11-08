@@ -24,7 +24,6 @@ export class NuevoDestinatarioComponent implements OnInit {
 	constructor(public fb: FormBuilder, private bancoExternoService: BancosExternosService) {}
 
 	async ngOnInit() {
-		console.log(222);
 		await this.bancoExternoService.getTipoCuenta().then(res => {
 			this.tipoCuentas = res as any;
 		});
