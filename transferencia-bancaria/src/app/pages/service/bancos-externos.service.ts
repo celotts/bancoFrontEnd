@@ -23,6 +23,7 @@ export class BancosExternosService {
         .get(`http://localhost:3004/obtenerBancos`)
         .then((response: responseBanco) => {
           console.log(response);
+          
           if (response.data.code !== 200) return this.mensajeError(response);
           return {
             codigo: response.data.code,
