@@ -50,5 +50,34 @@
   },
   "pre-commit": [
     "lint"
-  ]
+  ],
+  "eslintConfig": {
+    "extends": [
+      "xo",
+      "prettier"
+    ],
+    "env": {
+      "node": true,
+      "mocha": true
+    },
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "precommit": {
+    "run": "tslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/celotts/bancoBackend.git"
+  },
+  "author": "Carlos Lott",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/celotts/bancoBackend/issues"
+  },
+  "homepage": "https://github.com/celotts/bancoBackend#readme"
 }
